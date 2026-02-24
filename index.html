@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Furniture PRO — Премиум мебель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+
+<body data-theme="dark" data-lang="ru">
+
+    <!-- Theme & Lang Switcher -->
+    <div class="switchers">
+        <button class="switcher" onclick="toggleTheme()" title="Переключить тему">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="switcher" onclick="toggleLang()" id="langBtn">EN</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__logo">FURNITURE PRO</div>
+        <div class="nav__links">
+            <a href="#products" data-i18n="nav_catalog">Каталог</a>
+            <a href="#about" data-i18n="nav_about">О нас</a>
+            <a href="#advantages" data-i18n="nav_advantages">Преимущества</a>
+            <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+            <a href="#payment" data-i18n="nav_payment">Оплата</a>
+        </div>
+        <div class="nav__socials">
+            <a href="https://instagram.com/furniturepro" target="_blank" class="nav__social">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="nav__cart" onclick="toggleCart()">
+            <span>🛒</span>
+            <span id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="gradient-text" data-i18n="hero_future">FUTURE</span>
+                <span data-i18n="hero_of">OF</span>
+                <span class="gradient-text" data-i18n="hero_furniture">FURNITURE</span>
+            </h1>
+            <p class="hero__subtitle" data-i18n="hero_subtitle">Премиальная мебель для тех, кто ценит стиль и комфорт
+            </p>
+            <a href="#products" class="hero__btn" data-i18n="hero_cta">Смотреть коллекцию</a>
+        </div>
+        <div class="hero__stats">
+            <div class="stat">
+                <span class="stat__num">10+</span>
+                <span class="stat__text" data-i18n="stat_years">лет на рынке</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num">5000+</span>
+                <span class="stat__text" data-i18n="stat_clients">довольных клиентов</span>
+            </div>
+            <div class="stat">
+                <span class="stat__num">100%</span>
+                <span class="stat__text" data-i18n="stat_quality">качество</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text" data-i18n="about_title">О НАС</span>
+            </h2>
+            <div class="about__content">
+                <p class="about__text" data-i18n="about_text1"><strong>Furniture PRO</strong> — это целая экосистема
+                    современного подхода к мебели с внутренним комьюнити, собственным стилем и философией.</p>
+                <p class="about__text" data-i18n="about_text2">Мы создаем мебель, которая не просто заполняет
+                    пространство — она трансформирует вашу жизнь. Каждый предмет разработан с учетом эргономики,
+                    эстетики и долговечности.</p>
+                <p class="about__text" data-i18n="about_text3">Хотите обновить интерьер с премиальным качеством? Мы
+                    предлагаем индивидуальный подход, 3D-визуализацию и доставку по всей стране.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text" data-i18n="catalog_title">КАТАЛОГ</span>
+            </h2>
+            <p class="section__subtitle" data-i18n="catalog_subtitle">Выберите идеальную мебель для вашего пространства
+            </p>
+
+            <div class="products__grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text" data-i18n="advantages_title">ПРЕИМУЩЕСТВА</span>
+            </h2>
+            <div class="advantages__grid">
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">✦</div>
+                    <h3 data-i18n="adv_materials">Премиальные материалы</h3>
+                    <p data-i18n="adv_materials_desc">Натуральное дерево, итальянская кожа, немецкая фурнитура</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">◈</div>
+                    <h3 data-i18n="adv_design">Индивидуальный дизайн</h3>
+                    <p data-i18n="adv_design_desc">Разработаем мебель по вашим эскизам и размерам</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-card__icon">◉</div>
+                    <h3 data-i18n="adv_warranty">Гарантия 5 лет</h3>
+                    <p data-i18n="adv_warranty_desc">Полное гарантийное и постгарантийное обслуживание</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text" data-i18n="reviews_title">ОТЗЫВЫ</span>
+            </h2>
+            <p class="section__subtitle" data-i18n="reviews_subtitle">Что говорят наши клиенты</p>
+
+            <div class="reviews__slider">
+                <div class="reviews__track" id="reviewsTrack"></div>
+                <div class="reviews__nav">
+                    <button class="reviews__btn" onclick="prevReview()">←</button>
+                    <div class="reviews__dots" id="reviewsDots"></div>
+                    <button class="reviews__btn" onclick="nextReview()">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="payment" id="payment">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text" data-i18n="payment_title">СПОСОБЫ ОПЛАТЫ</span>
+            </h2>
+            <p class="section__subtitle" data-i18n="payment_subtitle">Выберите удобный способ оплаты</p>
+
+            <div class="payment__grid">
+                <div class="payment-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3 data-i18n="pay_card">Банковская карта</h3>
+                    <p>Visa, MasterCard, МИР</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3 data-i18n="pay_sbp">СБП</h3>
+                    <p data-i18n="pay_sbp_desc">Система быстрых платежей</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3 data-i18n="pay_cash">Наличные</h3>
+                    <p data-i18n="pay_cash_desc">При получении</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-percent"></i>
+                    <h3 data-i18n="pay_installment">Рассрочка</h3>
+                    <p data-i18n="pay_installment_desc">0% на 6 месяцев</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <div class="container">
+            <h2 class="section__title">
+                <span class="gradient-text">INSTAGRAM</span>
+            </h2>
+            <p class="section__subtitle" data-i18n="inst_subtitle">Следите за нами в Instagram</p>
+
+            <div class="instagram__grid" id="instagramGrid"></div>
+
+            <a href="https://instagram.com/furniturepro" target="_blank" class="instagram__btn">
+                <i class="fab fa-instagram"></i>
+                <span data-i18n="inst_follow">Подписаться</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta__title" data-i18n="cta_title">Мы не просто продаём мебель</h2>
+            <h3 class="cta__subtitle" data-i18n="cta_subtitle">мы создаём пространство для жизни</h3>
+            <a href="#products" class="cta__btn" data-i18n="cta_btn">Выбрать мебель</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">FURNITURE PRO</div>
+                    <p data-i18n="footer_desc">Премиальная мебель для вашего дома</p>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://instagram.com/furniturepro" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Furniture PRO. <span data-i18n="footer_rights">Все права защищены</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__overlay" onclick="toggleCart()"></div>
+        <div class="cart-modal__panel">
+            <button class="cart-modal__close" onclick="toggleCart()">✕</button>
+            <h3 class="cart-modal__title" data-i18n="cart_title">Корзина</h3>
+            <div class="cart-modal__items" id="cartItems"></div>
+            <div class="cart-modal__total">
+                <span data-i18n="cart_total">Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="cart-modal__checkout" onclick="checkout()" data-i18n="cart_checkout">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat" id="chat">
+        <div class="chat__header" onclick="toggleChat()">
+            <span>💬 <span data-i18n="chat_title">AI Помощник</span></span>
+            <span id="chatToggle">−</span>
+        </div>
+        <div class="chat__body" id="chatBody">
+            <div class="chat__messages" id="chatMessages"></div>
+            <div class="chat__input">
+                <input type="text" id="userInput" placeholder="Спросите о мебели..."
+                    onkeypress="if(event.key==='Enter')sendMessage()" data-i18n-placeholder="chat_placeholder">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
